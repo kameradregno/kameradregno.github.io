@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .position-relative {
+        font-family: "Windows";
+        font-weight: 600;
+        font-size: 12px;
+      }
+
+      .aboutmedropdown {
+        font-size: 13px;
+        font-weight: 700;
+        opacity: 0.5;
+        font-family: "Bebas Neue";
+        font-weight: 400;
+      }
+
+      .aboutmedropdown:hover + .aboutmecontenthide {
+        display: block;
+        background-color: rgb(235, 244, 249);
+        color: black;
+        border: 3px solid #000;
+        pointer-events: none;
+        z-index: 9999;
+        font-size: 12px;
+        line-height: 12px;
+        width: 34ch;
+        height: 70px;
+        position: absolute;
+        font-family: "Windows";
+        white-space: pre-wrap;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        padding: 2px 4px 2px 4px;
+        top: 43px;
+        left: 1rem;
+        line-height: 0.9rem;
+      }
+
+      .aboutmecontenthide {
+        display: none;
+      }
+
+      .work-info {
+        background-color: rgb(235, 244, 249);
+        top: 64.5px;
+        left: -3px;
+        position: absolute;
+        pointer-events: none;
+        z-index: 9999;
+        color: #000;
+        border: 3px solid #000;
+        font-family: "Windows";
+        font-size: 12px;
+        margin: 0;
+        font-family: "Windows";
+        padding: 2px 4px 2px 10px;
+      }
+
+      .getintouchdropdown {
+        font-size: 13px;
+        opacity: 0.5;
+        font-family: "Bebas Neue";
+        font-weight: 400;
+      }
+
+      .getintouchcontenthide {
+        display: none;
+      }
+
+      .getintouchdropdown:hover + .getintouchcontenthide {
+        color: black;
+        border: 3px solid #000;
+        pointer-events: none;
+        z-index: 9999;
+        font-size: 12px;
+        line-height: 12px;
+        width: 34ch;
+        height: 60px;
+        position: absolute;
+        font-family: "Windows";
+        white-space: pre-wrap;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        padding: 2px 4px 2px 4px;
+        line-height: 0.9rem;
+        left: 9.5rem;
+        background-color: rgb(236, 250, 232);
+        display: block;
+        top: 43px;
+      }
+
+      .skillsdropdown {
+        font-size: 13px;
+        font-family: "Bebas Neue";
+        font-weight: 400;
+        opacity: 0.5;
+      }
+
+      .skillscontenthide {
+        display: none;
+      }
+
+      .skillsdropdown:hover + .skillscontenthide {
+        color: black;
+        border: 3px solid #000;
+        pointer-events: none;
+        z-index: 9999;
+        font-size: 12px;
+        line-height: 12px;
+        width: 34ch;
+        height: 73px;
+        position: absolute;
+        font-family: "Windows";
+        white-space: pre-wrap;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        padding: 2px 4px 2px 4px;
+        line-height: 0.9rem;
+        left: 20.9rem;
+        background-color: rgb(241, 216, 216);
+        display: block;
+        top: 43px;
+      }
+
+      .ready {
+        background-color: rgb(241, 216, 216);
+        top: 67px;
+        left: -3px;
+        pointer-events: none;
+        z-index: 9999;
+        color: #000;
+        position: absolute;
+        border: 3px solid #000;
+        font-family: "Supernatural", "Courier", monospace;
+        font-size: 12px;
+        margin: 0;
+        font-family: "Windows";
+        padding: 2px 4px 2px 10px;
+      }
+    </style>
+
+    <!-- style for aside -->
+    <style>
+
+      .web1img:hover + .web1{
+        width: 400px;
+        height: 165px;
+        background-color: #000099;
+        padding: 0px 5px 0px 5px;
+        border-left: 6px solid #EBEDEE;
+        border-right: 6px solid #EBEDEE;
+        border-top: 6px solid #EBEDEE;
+        border-bottom: 6px solid #EBEDEE;
+        display: block;
+      }
+
+      .web1img {
+        width: 200px; height: 115px; opacity: 1;
+      }
+
+      .web1 {
+    
+    display: none;
+      }
+
+      .web1head {
+        font-family: 'Supernatural', 'Courier', monospace;
+    font-size: 11.5px;
+    padding: 10px 0px 5px 0px;
+    border-bottom: 1px solid #EBEDEE;
+    color: #FFCC00;
+      }
+
+      .web1text {
+    font-family: 'Courier', monospace;
+    font-size: 10.5px;
+    line-height: 20px;
+    padding: 0 0 12px 0;
+    margin: 12px 0 0 0;
+    color: #FFCC00;
+      }
+
+      /* web2 */
+
+      .web2img:hover + .web2{
+        width: 400px;
+        height: 165px;
+        background-color: #000099;
+        padding: 0px 5px 0px 5px;
+        border-left: 6px solid #EBEDEE;
+        border-right: 6px solid #EBEDEE;
+        border-top: 6px solid #EBEDEE;
+        border-bottom: 6px solid #EBEDEE;
+        display: block;
+      }
+
+      .web2img {
+        width: 100px; height: 115px; opacity: 1;
+      }
+
+      .web2 {
+    
+    display: none;
+      }
+
+      .web2head {
+        font-family: 'Supernatural', 'Courier', monospace;
+    font-size: 11.5px;
+    padding: 10px 0px 5px 0px;
+    border-bottom: 1px solid #EBEDEE;
+    color: #FFCC00;
+      }
+
+      .web2text {
+    font-family: 'Courier', monospace;
+    font-size: 10.5px;
+    line-height: 20px;
+    padding: 0 0 12px 0;
+    margin: 12px 0 0 0;
+    color: #FFCC00;
+      }
+
+      /* web3 */
+
+      .web3img:hover + .web3{
+        width: 400px;
+        height: 165px;
+        background-color: #000099;
+        padding: 0px 5px 0px 5px;
+        border-left: 6px solid #EBEDEE;
+        border-right: 6px solid #EBEDEE;
+        border-top: 6px solid #EBEDEE;
+        border-bottom: 6px solid #EBEDEE;
+        display: block;
+      }
+
+      .web3img {
+        width: 150px; height: 115px; opacity: 1;
+      }
+
+      .web3 {
+    
+    display: none;
+      }
+
+      .web3head {
+        font-family: 'Supernatural', 'Courier', monospace;
+    font-size: 11.5px;
+    padding: 10px 0px 5px 0px;
+    border-bottom: 1px solid #EBEDEE;
+    color: #FFCC00;
+      }
+
+      .web3text {
+    font-family: 'Courier', monospace;
+    font-size: 10.5px;
+    line-height: 20px;
+    padding: 0 0 12px 0;
+    margin: 12px 0 0 0;
+    color: #FFCC00;
+      }
+
+      /* web4 */
+
+      .web4img:hover + .web4{
+        width: 400px;
+        height: 165px;
+        background-color: #000099;
+        padding: 0px 5px 0px 5px;
+        border-left: 6px solid #EBEDEE;
+        border-right: 6px solid #EBEDEE;
+        border-top: 6px solid #EBEDEE;
+        border-bottom: 6px solid #EBEDEE;
+        display: block;
+      }
+
+      .web4img {
+        width: 110px; height: 115px; opacity: 1;
+      }
+
+      .web4 {
+    
+    display: none;
+      }
+
+      .web4head {
+        font-family: 'Supernatural', 'Courier', monospace;
+    font-size: 11.5px;
+    padding: 10px 0px 5px 0px;
+    border-bottom: 1px solid #EBEDEE;
+    color: #FFCC00;
+      }
+
+      .web4text {
+    font-family: 'Courier', monospace;
+    font-size: 10.5px;
+    line-height: 20px;
+    padding: 0 0 12px 0;
+    margin: 12px 0 0 0;
+    color: #FFCC00;
+      }
+
+      /* web5 */
+
+      .web5img:hover + .web5{
+        width: 400px;
+        height: 165px;
+        background-color: #000099;
+        padding: 0px 5px 0px 5px;
+        border-left: 6px solid #EBEDEE;
+        border-right: 6px solid #EBEDEE;
+        border-top: 6px solid #EBEDEE;
+        border-bottom: 6px solid #EBEDEE;
+        display: block;
+      }
+
+      .web5img {
+        width: 110px; height: 115px; opacity: 1;
+      }
+
+      .web5 {
+    
+    display: none;
+      }
+
+      .web5head {
+        font-family: 'Supernatural', 'Courier', monospace;
+    font-size: 11.5px;
+    padding: 10px 0px 5px 0px;
+    border-bottom: 1px solid #EBEDEE;
+    color: #FFCC00;
+      }
+
+      .web5text {
+    font-family: 'Courier', monospace;
+    font-size: 10.5px;
+    line-height: 20px;
+    padding: 0 0 12px 0;
+    margin: 12px 0 0 0;
+    color: #FFCC00;
+      }
+
+      /* web6 */
+
+      .web6img:hover + .web6{
+        width: 400px;
+        height: 165px;
+        background-color: #000099;
+        padding: 0px 5px 0px 5px;
+        border-left: 6px solid #EBEDEE;
+        border-right: 6px solid #EBEDEE;
+        border-top: 6px solid #EBEDEE;
+        border-bottom: 6px solid #EBEDEE;
+        display: block;
+      }
+
+      .web6img {
+        width: 110px; height: 115px; opacity: 1;
+      }
+
+      .web6 {
+    
+    display: none;
+      }
+
+      .web6head {
+        font-family: 'Supernatural', 'Courier', monospace;
+    font-size: 11.5px;
+    padding: 10px 0px 5px 0px;
+    border-bottom: 1px solid #EBEDEE;
+    color: #FFCC00;
+      }
+
+      .web6text {
+    font-family: 'Courier', monospace;
+    font-size: 10.5px;
+    line-height: 20px;
+    padding: 0 0 12px 0;
+    margin: 12px 0 0 0;
+    color: #FFCC00;
+      }
+
+      /* web7 */
+
+      .web7img:hover + .web7{
+        width: 400px;
+        height: 165px;
+        background-color: #000099;
+        padding: 0px 5px 0px 5px;
+        border-left: 6px solid #EBEDEE;
+        border-right: 6px solid #EBEDEE;
+        border-top: 6px solid #EBEDEE;
+        border-bottom: 6px solid #EBEDEE;
+        display: block;
+      }
+
+      .web7img {
+        width: 80px; height: 115px; opacity: 1;
+      }
+
+      .web7 {
+    
+    display: none;
+      }
+
+      .web7head {
+        font-family: 'Supernatural', 'Courier', monospace;
+    font-size: 11.5px;
+    padding: 10px 0px 5px 0px;
+    border-bottom: 1px solid #EBEDEE;
+    color: #FFCC00;
+      }
+
+      .web7text {
+    font-family: 'Courier', monospace;
+    font-size: 10.5px;
+    line-height: 20px;
+    padding: 0 0 12px 0;
+    margin: 12px 0 0 0;
+    color: #FFCC00;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <img
+      src="logo.png"
+      alt=""
+      class="position-absolute"
+      style="width: 185px; top: 62px; z-index: 100; left: calc(50% - 410px)"
+    />
+
+    <span
+      class="d-flex position-absolute"
+      style="top: 75px; left: calc(50% + 300px); z-index: 100; font-family: Windows; font-weight: 700;"
+    ><i class='bx bx-file fs-4 me-1'></i> CV AVAILABLE</span>
+
+    <span
+      class="position-absolute"
+      style="
+        font-size: 12px;
+        width: 125px;
+        top: 100px;
+        left: calc(50% + 300px);
+        z-index: 100;
+        border: none;
+        text-align: left;
+        margin: 0 0 0 5px;
+        padding: 0;
+      "
+      ><a
+        href="https://drive.google.com/file/d/1Wpti8qC7n2rvB1MXdWGUQbSwjVRt5VBJ/view?usp=drive_link"
+        style="
+          text-decoration: none;
+          color: #969494;
+          font-family: Bebas Neue;
+          font-weight: 700;
+        "
+        >CLICK HERE</a
+      ></span
+    >
+
+    <div
+      class="list d-flex flex-row position-absolute dragscroll"
+      style="
+        flex-wrap: nowrap;
+        width: 475px;
+        height: 100%;
+        top: 75px;
+        gap: 4rem;
+        left: calc(50% - 240px);
+        padding: 0 0 0 20px;
+        margin: 0 0 0 20px;
+        /* overflow-x: scroll;
+        overflow-y: hidden; */
+      "
+    >
+      <!-- about me -->
+      <div class="d-flex flex-column">
+        <span class="position-relative">
+          <i class="bx bx-user" style="color: #969494"></i> 06/03/2007
+        </span>
+        <div class="aboutmedropdown">ABOUT ME</div>
+
+        <div class="aboutmecontenthide">Major : Software Engineering<br> I am a student of IDN Boarding School Vocational High School, Based in Tangerang.
+          <i class="work-info">Open for work opportunities.</i>
+        </div>
+      </div>
+      <!-- Get in Touch -->
+      <div class="d-flex flex-column">
+        <span class="position-relative">
+          <i class="bx bx-envelope" style="color: #969494"></i>
+          regon0705@gmail.com</span
+        >
+        <div class="getintouchdropdown">GET IN TOUCH</div>
+
+        <div class="getintouchcontenthide"><i class="bx bxs-phone"></i> : 08111717523
+<i class="bx bxl-github"></i>: kameradregno
+<i class="bx bxl-linkedin-square"></i> : Muhammad Regno Schefendi
+        </div>
+      </div>
+      <!-- skills -->
+      <div class="d-flex flex-column">
+        <span class="position-relative"
+          ><i class="bx bxl-html5" style="color: #969494"></i> FRONTEND</span
+        >
+        <div class="skillsdropdown">SKILLS</div>
+
+        <div class="skillscontenthide"><i class="bx bxl-html5"></i> HTML5<br /><i class="bx bxl-css3"></i> CSS<br /><i class="bx bxl-bootstrap"></i> Bootstrap<br /><i
+            class="bx bxl-php"></i> PHP - Framework
+          <i class="ready">Ready to be placed as a Front-End Developer.</i>
+        </div>
+      </div>
+    </div>
+
+    <article style="display: block">
+      <aside
+        style="
+          background-color: #000;
+          width: 840px;
+          height: 420px;
+          margin: 129px auto;
+          padding: 0;
+          overflow-y: scroll;
+        "
+      >
+        <div class="container px-5" style="margin-top: 6rem">
+
+          <!-- web1 -->
+
+          <div class="d-grid d-sm-flex justify-content-sm-between">
+            <img src="web1.png" alt="" class="web1img">
+
+            <div class="web1">
+              <section class="web1head">
+
+              <div class="headtxt" style="font-family: 'Windows';">
+                <div class="d-grid d-sm-flex justify-content-sm-between mb-1">
+              <span>Project: E-Commerce</span>
+              <span class="pe-3">Tech Stack: Laravel</span>
+            </div>
+            <span class="pe-3">Features: Payment Gateway, Recommendations</span>
+              </div>
+            
+
+            </section>
+            <div class="web1text">
+Here, I made what every people depends on nowadays. It's an e-commerce, but I made it simpler.
+It may be less intriguing, but functionality works as what e-commerces look like.
+            </div>
+          </div>
+
+          
+          
+          
+        </div>
+
+        <!-- web2 -->
+
+        <div class="d-grid d-sm-flex justify-content-sm-between" style="margin-top: 5rem;">
+         <img src="web2.png" alt="" class="web2img">
+
+          <div class="web2">
+            <section class="web2head">
+
+            <div class="headtxt" style="font-family: 'Windows';">
+              <div class="d-grid d-sm-flex justify-content-sm-between mb-1">
+            <span>Project: JSON API</span>
+            <span class="pe-3">Tech Stack: Laravel</span>
+          </div>
+          <span class="pe-3">Features: CRUD, Image Storage</span>
+            </div>
+          
+
+          </section>
+          <div class="web2text">
+A simple API for creating rental vehicles, tested with a software namely Postman, and it works, no errors.
+          </div>
+        </div>
+
+        
+
+        
+        
+      </div>
+
+      <!-- web3 -->
+
+      <div class="d-grid d-sm-flex justify-content-sm-between" style="margin-top: 5rem;">
+        <img src="web3.png" alt="" class="web3img">
+
+         <div class="web3">
+           <section class="web3head">
+
+           <div class="headtxt" style="font-family: 'Windows';">
+             <div class="d-grid d-sm-flex justify-content-sm-between mb-1">
+           <span>Project: Dzikir Doa App</span>
+           <span class="pe-3">Tech Stack: Kotlin</span>
+         </div>
+         <span class="pe-3">Features: ViewPager2, Intent</span>
+           </div>
+         
+
+         </section>
+         <div class="web3text">
+Simplified for muslims, remembering the almighty god.
+         </div>
+       </div>
+
+       
+       
+     </div>
+
+
+     <!-- web4 -->
+
+     <div class="d-grid d-sm-flex justify-content-sm-between" style="margin-top: 5rem;">
+      <img src="web4.png" alt="" class="web4img">
+
+       <div class="web4">
+         <section class="web4head">
+
+         <div class="headtxt" style="font-family: 'Windows';">
+           <div class="d-grid d-sm-flex justify-content-sm-between mb-1">
+         <span>Project: News App</span>
+         <span class="pe-3">Tech Stack: Kotlin</span>
+       </div>
+       <span class="pe-3">Features: ViewPager2, Intent, JSON API, Search, WebView</span>
+         </div>
+       
+
+       </section>
+       <div class="web4text">
+Using public API to get latest news from certain topics, also searchable for finding related news. And detail page uses website elements.
+       </div>
+     </div>
+
+     
+     
+   </div>
+
+   <!-- web5 -->
+
+   <div class="d-grid d-sm-flex justify-content-sm-between" style="margin-top: 5rem;">
+    <img src="web5.png" alt="" class="web5img">
+
+     <div class="web5">
+       <section class="web5head">
+
+       <div class="headtxt" style="font-family: 'Windows';">
+         <div class="d-grid d-sm-flex justify-content-sm-between mb-1">
+       <span>Project: Quran App</span>
+       <span class="pe-3">Tech Stack: Kotlin</span>
+     </div>
+     <span class="pe-3">Features: ViewPager2, Intent, JSON API, Search, Playable Audio, Arabic Text, and Translation</span>
+       </div>
+     
+
+     </section>
+     <div class="web5text">
+Same as the News App, using public API to get quran surahs from number 1 to 114, also equipped with a playable audio per verses, for better recitement.
+     </div>
+   </div>
+
+   
+   
+ </div>
+
+ <!-- web6 -->
+
+ <div class="d-grid d-sm-flex justify-content-sm-between" style="margin-top: 5rem;">
+  <img src="web6.png" alt="" class="web6img">
+
+   <div class="web6">
+     <section class="web6head">
+
+     <div class="headtxt" style="font-family: 'Windows';">
+       <div class="d-grid d-sm-flex justify-content-sm-between mb-1">
+     <span>Project: Quran App</span>
+     <span class="pe-3">Tech Stack: Flutter</span>
+   </div>
+   <span class="pe-3">Features: Tabs, Navigation, JSON API, Search, Arabic Text, and Translation</span>
+     </div>
+   
+
+   </section>
+   <div class="web6text">
+This is the same usage app, but this was made by Flutter framework.
+   </div>
+ </div>
+
+ 
+ 
+</div>
+
+<!-- web7 -->
+
+<div class="d-grid d-sm-flex justify-content-sm-between" style="margin-top: 5rem; margin-bottom: 5rem;">
+  <img src="web7.png" alt="" class="web7img">
+
+   <div class="web7">
+     <section class="web7head">
+
+     <div class="headtxt" style="font-family: 'Windows';">
+       <div class="d-grid d-sm-flex justify-content-sm-between mb-1">
+     <span>Project: News App</span>
+     <span class="pe-3">Tech Stack: Flutter</span>
+   </div>
+   <span class="pe-3">Features: Tabs, Navigation, JSON API, Search, Arabic Text, and Translation</span>
+     </div>
+   
+
+   </section>
+   <div class="web7text">
+This news app is using local string to fetch the datas, but it works likely a news app, with detail page for reading more about the news.
+   </div>
+ </div>
+
+ 
+ 
+</div>
+
+      
+      </aside>
+    </article>
+
+    <footer style="position: absolute;
+    top: 575px;
+    left: calc(50% - 550px);
+    width: 1100px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;">
+    <h6 style="font-size: 16px; color: rgba(0, 0, 0, .85);
+    margin-right: 15px;
+    text-align: center;
+    font-family: 'bankgothic';
+    opacity: .5;">MUHAMMAD REGNO SCHEENDI'S PORTOFOLIO WEBSITE</h6>
+    <h6 style="font-size: 16px; color: rgba(0, 0, 0, .85);
+    margin-right: 15px;
+    text-align: center;
+    font-family: 'bankgothic';
+    opacity: .5;">2024</h6>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
