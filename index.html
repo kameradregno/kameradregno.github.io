@@ -189,10 +189,7 @@
         span,
         article,
         footer,
-        .list,
-        .aboutmedropdown,
-        .getintouchdropdown,
-        .skillsdropdown
+        .list
         {
           display: none;
         }
@@ -217,10 +214,7 @@
         span,
         article,
         footer,
-        .list,
-        .aboutmedropdown,
-        .getintouchdropdown,
-        .skillsdropdown
+        .list
         {
           display: none ;
         }
@@ -240,10 +234,7 @@
         span,
         article,
         footer,
-        .list,
-        .aboutmedropdown,
-        .getintouchdropdown,
-        .skillsdropdown
+        .list
         {
           display: none;
         }
@@ -884,6 +875,9 @@ This news app is using local string to fetch the datas, but it works likely a ne
       });
       // Hide warncontainer
       document.querySelector('.warncontainer').style.display = 'none';
+      document.querySelector('.aboutmedropdown').style.display = 'block';
+      document.querySelector('.getintouchdropdown').style.display = 'block';
+      document.querySelector('.skillsdropdown').style.display = 'block';
     } else {
       // Hide all elements
       document.querySelectorAll('img, span, article, footer, .list').forEach(function(el) {
@@ -893,6 +887,10 @@ This news app is using local string to fetch the datas, but it works likely a ne
       document.querySelector('.warncontainer').style.display = 'block';
       document.querySelector('.warncontainer').style.marginLeft = '5rem';
       document.querySelector('.warncontainer').style.marginRight = '5rem';
+      document.querySelector('.aboutmedropdown').style.marginRight = '5rem';
+      document.querySelector('.aboutmedropdown').style.display = 'none';
+      document.querySelector('.getintouchdropdown').style.display = 'none';
+      document.querySelector('.skillsdropdown').style.display = 'none';
     }
   }
   // Run the function on initial load
