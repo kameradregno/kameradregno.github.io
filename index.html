@@ -173,7 +173,6 @@
           display: none !important;
         }
 
-        /* Menampilkan elemen warncontainer */
         .warncontainer {
           display: block !important;
           text-align: center;
@@ -183,7 +182,7 @@
         }
       }
 
-      @media (max-width: 768px) {
+      /* @media (max-width: 768px) {
         img,
         span,
         article,
@@ -192,7 +191,6 @@
           display: none !important;
         }
 
-        /* Menampilkan elemen warncontainer */
         .warncontainer h2 {
           display: block !important;
           text-align: center;
@@ -212,7 +210,6 @@
           display: none !important;
         }
 
-        /* Menampilkan elemen warncontainer */
         .warncontainer h2 {
           display: block !important;
           text-align: center;
@@ -232,7 +229,6 @@
           display: none !important;
         }
 
-        /* Menampilkan elemen warncontainer */
         .warncontainer h2 {
           display: block !important;
           text-align: center;
@@ -241,7 +237,7 @@
           margin-right: 2px;
           margin-top: 15rem;
         }
-      }
+      } */
 
       .warncontainer {
           display: none;
@@ -856,6 +852,36 @@ This news app is using local string to fetch the datas, but it works likely a ne
     opacity: .5;">2024</h6>
 
     </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  function checkDesktopMode() {
+    // Check if window width is more than 1024px
+    if (window.innerWidth > 1024) {
+      // Show all elements
+      document.querySelectorAll('img, span, article, footer, .list').forEach(function(el) {
+        el.style.display = 'block';
+      });
+      // Hide warncontainer
+      document.querySelector('.warncontainer').style.display = 'none';
+    } else {
+      // Hide all elements
+      document.querySelectorAll('img, span, article, footer, .list').forEach(function(el) {
+        el.style.display = 'none';
+      });
+      // Show warncontainer
+      document.querySelector('.warncontainer').style.display = 'block';
+    }
+  }
+
+  // Run the function on initial load
+  checkDesktopMode();
+
+  // Add event listener for window resize
+  window.addEventListener('resize', checkDesktopMode);
+});
+
+    </script>
 
 
     <!-- Bootstrap JavaScript Libraries -->
