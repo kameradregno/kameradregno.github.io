@@ -169,30 +169,41 @@
         span,
         article,
         footer,
-        .list {
+        .list,
+        .aboutmedropdown,
+        .skillsdropdown,
+        .getintouchdropdown
+        {
           display: none;
         }
+
+
 
         .warncontainer {
           display: block;
           text-align: center;
+          font-size: 20px;
           margin-left: 5rem;
           margin-right: 5rem;
           margin-top: 15rem;
         }
       }
 
-      /* @media (max-width: 768px) {
+      @media (max-width: 768px) {
         img,
         span,
         article,
         footer,
-        .list {
-          display: none !important;
+        .list,
+        .aboutmedropdown,
+        .skillsdropdown,
+        .getintouchdropdown
+        {
+          display: none;
         }
 
-        .warncontainer h2 {
-          display: block !important;
+        .warncontainer {
+          display: block;
           text-align: center;
           font-size: 20px;
           margin-left: 5px;
@@ -206,12 +217,16 @@
         span,
         article,
         footer,
-        .list {
-          display: none !important;
+        .list,
+        .aboutmedropdown,
+        .skillsdropdown,
+        .getintouchdropdown
+        {
+          display: none ;
         }
 
         .warncontainer h2 {
-          display: block !important;
+          display: block ;
           text-align: center;
           font-size: 15px;
           margin-left: 2px;
@@ -225,19 +240,23 @@
         span,
         article,
         footer,
-        .list {
-          display: none !important;
+        .list,
+        .aboutmedropdown,
+        .skillsdropdown,
+        .getintouchdropdown
+        {
+          display: none;
         }
 
-        .warncontainer h2 {
-          display: block !important;
+        .warncontainer h2{
+          display: block ;
           text-align: center;
           font-size: 13px;
           margin-left: 2px;
           margin-right: 2px;
           margin-top: 15rem;
         }
-      } */
+      }
 
       .warncontainer {
           display: none;
@@ -844,7 +863,7 @@ This news app is using local string to fetch the datas, but it works likely a ne
     margin-right: 15px;
     text-align: center;
     font-family: 'bankgothic';
-    opacity: .5;">MUHAMMAD REGNO SCHEENDI'S PORTOFOLIO WEBSITE</h6>
+    opacity: .5;">MUHAMMAD REGNO SCHEFENDI'S PORTOFOLIO WEBSITE</h6>
     <h6 style="font-size: 16px; color: rgba(0, 0, 0, .85);
     margin-right: 15px;
     text-align: center;
@@ -854,6 +873,7 @@ This news app is using local string to fetch the datas, but it works likely a ne
     </footer>
 
     <script>
+      //> 1024px
       document.addEventListener('DOMContentLoaded', function() {
   function checkDesktopMode() {
     // Check if window width is more than 1024px
@@ -880,7 +900,6 @@ This news app is using local string to fetch the datas, but it works likely a ne
   // Add event listener for window resize
   window.addEventListener('resize', checkDesktopMode);
 });
-
     </script>
 
 
