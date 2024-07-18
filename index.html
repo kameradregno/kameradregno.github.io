@@ -200,6 +200,10 @@
           display: none;
         }
 
+        @keyframes fadeIn { 
+          from { opacity: 0; } 
+        }
+
         .warncontainer {
           display: block;
           text-align: center;
@@ -207,6 +211,7 @@
           margin-left: 5px;
           margin-right: 5px;
           margin-top: 15rem;
+          animation: fadeIn 1s infinite alternate;
         }
       }
 
